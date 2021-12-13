@@ -1,8 +1,7 @@
 import authHeader from "./auth-header";
 import axios from "axios";
-require('dotenv').config();
 
-const HOST_URL = process.env.NODE_ENV === 'production' ? process.env.REST_APP_SERVER_URL : "http://localhost:8080";
+const HOST_URL = process.env.NODE_ENV === 'production' ? "http://www.citajmo.ba" : "http://localhost:8080";
 const API_URL =  HOST_URL + "/api/access/";
 
 class AccessService {
