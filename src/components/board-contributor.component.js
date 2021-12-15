@@ -62,6 +62,7 @@ export default class BoardContributor extends Component {
       <div className="contributor-menu">
         <ToggleButtonGroup
           color="primary"
+          size="large"
           value={this.state.menuSelection}
           exclusive
           onChange={this.onToggleButtonChange}
@@ -73,7 +74,7 @@ export default class BoardContributor extends Component {
         </ToggleButtonGroup>
 
         <this.displayMenuItem />
-  </div>
+      </div>
     )
   }
 }

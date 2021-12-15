@@ -52,12 +52,12 @@ export default class CreateQuestion extends Component {
       question: {
         bookId: this.props.book.id,
         userId: AuthService.getCurrentUser().id,
-        numberOfAnswers: "",
-        numCorrectAnswers: "",
-        questionCategoryId: "",
-        question: "",
-        comment: "",
-        difficultyLevelId: ""
+        numberOfAnswers: null,
+        numCorrectAnswers: null,
+        questionCategoryId: null,
+        question: null,
+        comment: null,
+        difficultyLevelId: null
         },
       answers: [],
     });
@@ -217,7 +217,7 @@ export default class CreateQuestion extends Component {
               <label htmlFor="inputSelectQuestionCategory">{msg.MSG_QUESTION_CATEGORY}</label>
               <select className="form-select required" 
                   id={"inputSelectQuestionCategory"}
-                  defaultValue={this.state.question.questionCategoryId}
+                  defaultValue={this.state.question.questionCategoryId || ""}
                   required
                   onChange={this.onChangeQuestionCategory}
               >
@@ -238,7 +238,7 @@ export default class CreateQuestion extends Component {
             <label htmlFor="inputSelectQuestionDifficulty">{msg.MSG_DIFFICULTY_LEVEL}</label>
             <select className="form-select required" 
                 id={"inputSelectQuestionDifficulty"}
-                defaultValue={this.state.question.difficultyLevelId}
+                defaultValue={this.state.question.difficultyLevelId || ""}
                 required
                 onChange={this.onChangeQuestionDifficulty}
             >
@@ -315,7 +315,6 @@ export default class CreateQuestion extends Component {
 
             {/* form to add answers to the new question. It shows if the number 
                 of answers is set */}
-            { numCorrectAnswers ? (
               <div className="form-add-answers row">
 
                  {/* add correct answer(s)*/}
@@ -424,7 +423,7 @@ export default class CreateQuestion extends Component {
 
                   
               </div>
-              ) : (null)}
+
               <div className="row">
                 <div className="col-md-12 my-2 py-2">
                       <button type="submit"

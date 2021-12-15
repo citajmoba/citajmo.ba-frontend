@@ -59,7 +59,7 @@ export default class Login extends Component {
             //the profile page is now loaded, which loads the Profile component
             //AuthService.login returns response.data so that is passed on
             .then( () => {
-                this.props.history.push("/profile");
+                this.props.history.push("/");
                 window.location.reload();
             },
             // this is a reject handler for Authservice.login
