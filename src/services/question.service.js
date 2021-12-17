@@ -1,7 +1,7 @@
 import authHeader from "./auth-header";
 import axios from "axios";
 
-const HOST_URL = process.env.NODE_ENV === 'production' ? "https://www.citajmo.ba" : "http://localhost:8080";
+const HOST_URL = process.env.NODE_ENV === 'production' ? "https://citajmo.ba" : "http://localhost:8080";
 const API_URL =  HOST_URL + "/api/questions";
 
 class QuestionDataService {
