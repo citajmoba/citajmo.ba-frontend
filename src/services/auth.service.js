@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const HOST_URL = process.env.NODE_ENV === 'production' ? "http://www.citajmo.ba" : "http://localhost:8080";
+const HOST_URL = process.env.NODE_ENV === 'production' ? "https://www.citajmo.ba" : "http://localhost:8080";
 const API_URL =  HOST_URL + "/api/auth/";
 
 class AuthService {

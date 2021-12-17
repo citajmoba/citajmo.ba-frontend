@@ -53,7 +53,7 @@ class App extends Component {
           <ul className="ul-homepage">
             <li className="li-homepage">
               <Link to={"/home"} className="nav-item">
-                <li>{msg.MSG_HOME}</li>
+                {msg.MSG_HOME}
               </Link>
             </li>
 
