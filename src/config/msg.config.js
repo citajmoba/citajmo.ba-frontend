@@ -156,7 +156,16 @@ module.exports = {
     MSG_PLS_CLICK_ON_BOOK: "Izaberite knjigu...",
     MSG_PLS_CLICK_ON_QUESTION: "Izaberite pitanje",
     MSG_PLS_CLICK_ON_QUESTION_OR_CREATE_QUESTION: "Izaberite pitanje ili dodajte pitanje",
-    MSG_PROFILE: "Profile",
+    MSG_PASSWORD: "Lozinka",
+    MSG_PERSONAL_INFO: "Lični podaci",
+    MSG_PASSWORD_CHANGE: "Promjena lozinke",
+    MSG_PASSWORD_CHANGE_SUCCESS: "Promjena lozinke uspješna!",
+    MSG_PASSWORD_CURRENT: "Trenutna lozinka:",
+    MSG_PASSWORD_FORMAT_ERROR: "The password must be between 6 and 40 characters.",
+    MSG_PASSWORD_NEW: "Nova lozinka",
+    MSG_PASSWORD_NO_MATCH: "Lozinka nije pravilno potvrdjena",
+    MSG_PASSWORD_CONFIRM: "Potvrdite novu lozinku:",
+    MSG_PROFILE: "Korisnički podaci",
     MSG_PUBLICATION_YEAR: "Godina objavljivanja",
     MSG_PUBLISHED: "Završena",
     MSG_QUESTION: "Pitanje",
@@ -183,7 +192,8 @@ module.exports = {
     MSG_TITLE: "Naslov",
     MSG_UNACCENTED: "Ne koristim slova č,ć,š,ž,đ",
     MSG_USER: "Korisnik",
-    MSG_WAIT_UNTIL_QUESTIONS_LOAD: "Pitanja se učitavaju ..."
+    MSG_WAIT_UNTIL_QUESTIONS_LOAD: "Pitanja se učitavaju ...",
+    MSG_WORK_IN_PROGRESS: "U izradi ..."
 
 
     

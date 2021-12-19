@@ -34,6 +34,23 @@ class AuthService {
     getCurrentUser() {
         return JSON.parse(localStorage.getItem("user"));
     }
+
+    changePwd (userId, password, newPassword) {
+        return axios.patch(API_URL + "changepwd", {
+            "userId": userId,
+            "password": password,
+            "newPassword": newPassword
+        })
+
+        .then(response => {
+            if (response.data.accessToken) {
+                const user = JSON.parse(localStorage.getItem("user"));
+                user.accessToken = response.data.accessToken;
+                localStorage.setItem("user", JSON.stringify(user));
+            }
+            return response.data;
+        });
+    }
 }
 
 export default new AuthService();

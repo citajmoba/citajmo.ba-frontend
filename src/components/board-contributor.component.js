@@ -47,9 +47,11 @@ export default class BoardContributor extends Component {
         break;
 
       case "history":
+        Output = msg.MSG_WORK_IN_PROGRESS;
         break;
 
       case "stats":
+        Output = msg.MSG_WORK_IN_PROGRESS;
         break;
             
     };
