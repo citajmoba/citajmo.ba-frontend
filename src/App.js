@@ -28,7 +28,7 @@ class App extends Component {
 
   componentDidMount() {
     const user = AuthService.getCurrentUser();
-    console.log(user);
+    if (process.env.NODE_ENV === 'development') {console.log(user)};
     if (user) {
       this.setState( (prevState) => ({
         currentUser: user,

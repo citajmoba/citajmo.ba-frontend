@@ -1,3 +1,4 @@
+import authHeader from "./auth-header";
 import axios from "axios";
 
 const HOST_URL = process.env.NODE_ENV === 'production' ? "https://citajmo.ba" : "http://localhost:8080";
@@ -40,7 +41,7 @@ class AuthService {
             "userId": userId,
             "password": password,
             "newPassword": newPassword
-        })
+        }, { headers: authHeader()})
 
         .then(response => {
             if (response.data.accessToken) {

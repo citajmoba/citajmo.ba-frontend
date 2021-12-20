@@ -8,7 +8,7 @@ class QuestionDataService {
 
   // find all questions from a book with bookId
   find(bookId) {
-    return axios.get(API_URL + `/${bookId}`);
+    return axios.get(API_URL + `/${bookId}`, { headers: authHeader()});
   }
 
   add(data) {
@@ -17,7 +17,7 @@ class QuestionDataService {
 
  //update question with question id 
   update(id, data) {
-    return axios.put(API_URL + `/${id}`, data);
+    return axios.put(API_URL + `/${id}`, data, { headers: authHeader()});
   }
 }
 

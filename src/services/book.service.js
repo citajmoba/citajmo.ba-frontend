@@ -8,13 +8,13 @@ class BookDataService {
 
   //find book satisfying the query given in the data
   findAll(data) {
-    return axios.get(API_URL, {params: data});
+    return axios.get(API_URL, { headers: authHeader()}, {params: data});
   }
 
   //find book with id
   find(bookId) {
 
-    return axios.get(API_URL + `/${bookId}`);
+    return axios.get(API_URL + `/${bookId}`, { headers: authHeader()});
   }
 
   //create book
@@ -25,7 +25,7 @@ class BookDataService {
   //update book
   update(bookId, data) {
 
-    return axios.put(API_URL + `/${bookId}`, data);
+    return axios.put(API_URL + `/${bookId}`, data, { headers: authHeader()});
   }
 }
 
