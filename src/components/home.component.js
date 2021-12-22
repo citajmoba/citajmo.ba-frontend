@@ -33,7 +33,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-homepage">
         {/*<header className="jumbotron">
           <h3>{this.state.content}</h3>*/}
           <div className="body-homepage">
@@ -54,7 +54,7 @@ export default class Home extends Component {
                     <div className='item-homepage'>
                         <img src={pic2} alt=""/>
                         <h2>Takmičenje</h2>
-                        <h3>Odmjeri se sa svojim vršnjacima u čitanju.</h3>
+                        <h3>Odmjeri se sa svojim vršnjacima u čitanju. Budi čitalac na duge staze.</h3>
                     </div>
                     <div className='item-homepage'>
                         <img src={pic3} alt=""/>

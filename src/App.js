@@ -47,17 +47,17 @@ class App extends Component {
     return (
       <div>
       
-        <header className="header-homepage">
+        <header className="header-main">
 
-          <ul className="ul-homepage">
-            <li className="li-homepage">
+          <ul className="ul-main">
+            <li className="li-main">
               <Link to={"/home"} className="nav-item">
                 {msg.MSG_HOME}
               </Link>
             </li>
 
             {showContributorBoard && (
-              <li className="li-homepage">
+              <li className="li-main">
                 <Link to={"/contributor"} className="nav-item">
                   {msg.MSG_CONTRIBUTOR_BOARD}
                 </Link>
@@ -65,7 +65,7 @@ class App extends Component {
             )}
 
             {showAdminBoard && (
-              <li className="li-homepage">
+              <li className="li-main">
                 <Link to={"/admin"} className="nav-item">
                   {msg.MSG_ADMIN_BOARD}
                 </Link>
@@ -73,7 +73,7 @@ class App extends Component {
             )}
 
             {currentUser && (
-              <li className="li-homepage">
+              <li className="li-main">
                 <Link to={"/user"} className="nav-item">
                   {msg.MSG_USER}
                 </Link>
@@ -82,27 +82,27 @@ class App extends Component {
           </ul>
 
           {currentUser ? (
-            <ul className="ul-homepage">
-              <li className="li-homepage">
+            <ul className="ul-main">
+              <li className="li-main">
                 <Link to={"/profile"} className="nav-item">
                   {currentUser.username}
                 </Link>
               </li>
-              <li className="li-homepage">
+              <li className="li-main">
                 <a href="/" className="nav-item" onClick={this.logOut}>
                   {msg.MSG_LOGOUT}
                 </a>
               </li>
             </ul>
           ) : (
-            <ul className="ul-homepage">
-              <li className="li-homepage">
+            <ul className="ul-main">
+              <li className="li-main">
                 <Link to={"/login"} className="nav-item">
                   {msg.MSG_LOGIN}
                 </Link>
               </li>
 
-              <li className="li-homepage">
+              <li className="li-main">
                 <Link to={"/register"} className="nav-item">
                   {msg.MSG_SIGNUP}
                 </Link>
@@ -110,8 +110,7 @@ class App extends Component {
             </ul>
           )}
         </header>
-        <div className="body-homepage">
-        <div className="container-md mt-3">
+        <div className="container-main">
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
@@ -122,7 +121,6 @@ class App extends Component {
             <Route path="/admin" component={BoardAdmin} />
           </Switch>
         </div>
-      </div>
       </div>
     );
   }
